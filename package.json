@@ -1,0 +1,9 @@
+{
+  "name": "Carousel_Hooks_exp",
+  "version": "1.0.0",
+  "description": "Simple API fetch and render into carousels using different methods",
+  "main": "index.js",
+  "repository": "https://github.com/stevekutz/Carousel_Hooks_exp",
+  "author": "Steve Kutz",
+  "license": "MIT"
+}
