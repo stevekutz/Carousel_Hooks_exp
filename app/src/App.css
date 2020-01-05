@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.navActive {
+    background-color: rgba(240, 233, 233, 0.6);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navActive a{
+    padding: 20px;
+}
+
+.active{
+    font-weight: bold;
+    color: darkblue;
+}
+
+
+.navActive a:hover {
+    text-decoration: underline;
+    color: darkblue; 
+}
