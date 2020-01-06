@@ -4,12 +4,20 @@ import './App.css';
 import {Menu, Segment} from 'semantic-ui-react';
 import {NavLink, Route} from 'react-router-dom';
 import avengerInfo from './data/avengerInfo';
+import {useState} from 'reinspect';
 
 import LandingPage from './components/LandingPage';
 import AvengerCarousel from './components/AvengerCarousel';
 import AvengerHookCarousel from './components/AvengerHookCarousel';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 function App() {
+    const [isActive, setIsActive] = useState(false, "isActive State");
+
+// <i className = 'isactive' className="fas fa-bars"></i>
+
     return (
         <div>
 
@@ -21,8 +29,27 @@ function App() {
                     <NavLink to = '/hooks' exact> Hooks </NavLink> 
                     <NavLink to = '/other' exact> Other </NavLink>    
                 </div>
-
-            </div>
+                <div onClick = {() => setIsActive(!isActive)}>
+                    {isActive 
+                        ? <div>                        
+                            <p> Active TRUE  <i class = "fas fa-bars"></i> </p>
+                          </div>
+                        : <div>
+                            <p> Active false  <i class = "fas fa-grimace"> </i> </p>
+                          </div> 
+                    }                
+                </div>
+                
+                
+                </div>
+            {/*    
+                <div onClick = {() => setIsActive(!isActive)}>
+                    {isActive 
+                        ? <i class = "fas fa-bars"></i>
+                        : <i class = "fas fa-grimace"></i>
+                    }                
+                </div>
+            */}    
 
             <div>    
                 <Route
