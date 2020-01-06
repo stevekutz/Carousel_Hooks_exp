@@ -29,18 +29,18 @@ function App() {
                     <NavLink to = '/hooks' exact> Hooks </NavLink> 
                     <NavLink to = '/other' exact> Other </NavLink>    
                 </div>
-                <div onClick = {() => setIsActive(!isActive)}>
-                    {isActive 
-                        ? <div>                        
-                            <p> Active TRUE  <i class = "fas fa-bars"></i> </p>
-                          </div>
-                        : <div>
-                            <p> Active false  <i class = "fas fa-grimace"> </i> </p>
-                          </div> 
-                    }                
+                <div onClick = {() => setIsActive(!isActive)}> toggle
                 </div>
                 
                 
+                {isActive 
+                    ? <div>                        
+                        <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
+                      </div>
+                    : <div>
+                        <p> Active false  </p>
+                      </div> 
+                }                
                 </div>
             {/*    
                 <div onClick = {() => setIsActive(!isActive)}>
