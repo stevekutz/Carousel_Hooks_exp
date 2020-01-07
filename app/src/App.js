@@ -33,13 +33,13 @@ function App() {
                 </div>
                 
                 
-                {isActive 
-                    ? <div>                        
+                {(isActive === true) 
+                    ?                         
                         <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
-                      </div>
-                    : <div>
-                        <p> Active false  </p>
-                      </div> 
+                      
+                    : 
+                        <span> <i class = "fas fa-grimace"></i> Active False</span>
+                       
                 }                
                 </div>
             {/*    
