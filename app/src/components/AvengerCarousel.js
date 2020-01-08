@@ -103,12 +103,6 @@ class AvengerCarousel extends React.Component {
                         </Button>
                     </Menu.Item> 
                                         
-                    <Menu.Item>
-                        <Button> 
-                            <NavLink to  = '/avengers'> Avengers List </NavLink>
-                                <Icon name = 'meh outline' />  
-                        </Button>
-                    </Menu.Item> 
                 </Menu>
                 </Grid>
                             
