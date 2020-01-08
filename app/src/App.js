@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Menu, Segment} from 'semantic-ui-react';
+import {Dropdown, Menu, Segment} from 'semantic-ui-react';
 import {NavLink, Route} from 'react-router-dom';
 import avengerInfo from './data/avengerInfo';
 import {useState} from 'reinspect';
@@ -12,6 +12,19 @@ import AvengerHookCarousel from './components/AvengerHookCarousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+const MyMenu = () => {
+    return (
+        <Menu>
+            <Dropdown>
+                <Dropdown.Item> first</Dropdown.Item>
+                <Dropdown.Item> second</Dropdown.Item>
+                <Dropdown.Item> third</Dropdown.Item>
+            </Dropdown>    
+        </Menu>
+    )
+}
+
 
 function App() {
     const [isActive, setIsActive] = useState(false, "isActive State");
@@ -29,27 +42,25 @@ function App() {
                     <NavLink to = '/hooks' exact> Hooks </NavLink> 
                     <NavLink to = '/other' exact> Other </NavLink>    
                 </div>
-                <div onClick = {() => setIsActive(!isActive)}> toggle
-                </div>
-                
-                
-                {(isActive === true) 
-                    ?                         
-                        <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
-                      
-                    : 
-                        <span> <i class = "fas fa-grimace"></i> Active False</span>
-                       
-                }                
-                </div>
-            {/*    
                 <div onClick = {() => setIsActive(!isActive)}>
-                    {isActive 
-                        ? <i class = "fas fa-bars"></i>
-                        : <i class = "fas fa-grimace"></i>
-                    }                
+                
+                
+                    {(isActive === true) 
+                        ?                         
+                            <Segment>
+                                <div style = {{display: 'flex', flexDirection: 'column'}}>
+                                    <NavLink to = '/' exact> Home </NavLink> 
+                                    <NavLink to = '/classic' exact> Classic </NavLink> 
+                                    <NavLink to = '/hooks' exact> Hooks </NavLink> 
+                                    <NavLink to = '/other' exact> Other </NavLink>    
+                                </div>
+                            </Segment>
+                        : 
+                            <span> <i class = "fas fa-bars"></i> </span>
+                    }                                
                 </div>
-            */}    
+            </div>
+   
 
             <div>    
                 <Route
@@ -85,3 +96,12 @@ function App() {
 }
 
 export default App;
+
+// {(isActive === true) 
+//     ?                         
+//         <Segment>
+//             <span> Active FALSE  <i class = "fas fa-grimace"></i> </span>
+//         </Segment>
+//     : 
+//         <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
+// } 
