@@ -45,19 +45,19 @@ function App() {
                 <div onClick = {() => setIsActive(!isActive)}>
                 
                 
-                    {(isActive === true) 
-                        ?                         
-                            <Segment>
-                                <div style = {{display: 'flex', flexDirection: 'column'}}>
-                                    <NavLink to = '/' exact> Home </NavLink> 
-                                    <NavLink to = '/classic' exact> Classic </NavLink> 
-                                    <NavLink to = '/hooks' exact> Hooks </NavLink> 
-                                    <NavLink to = '/other' exact> Other </NavLink>    
-                                </div>
-                            </Segment>
-                        : 
-                            <span> <i class = "fas fa-bars"></i> </span>
-                    }                                
+                {(isActive === true) 
+                    ?                         
+                        <Segment>
+                            <div style = {{display: 'flex', flexDirection: 'column'}}>
+                                <NavLink to = '/' exact> Home </NavLink> 
+                                <NavLink to = '/classic' exact> Classic </NavLink> 
+                                <NavLink to = '/hooks' exact> Hooks </NavLink> 
+                                <NavLink to = '/other' exact> Other </NavLink>    
+                            </div>
+                        </Segment>
+                    : 
+                        <span> <i class = "fas fa-bars"></i> </span>
+                }                                
                 </div>
             </div>
    
@@ -97,11 +97,39 @@ function App() {
 
 export default App;
 
+
+//  fa icons and text changes
 // {(isActive === true) 
 //     ?                         
 //         <Segment>
 //             <span> Active FALSE  <i class = "fas fa-grimace"></i> </span>
 //         </Segment>
+//     : 
+//         <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
+// } 
+
+              
+// {(isActive === true) 
+//     ?                         
+//         <Segment>
+//             <div style = {{display: 'flex', flexDirection: 'column'}}>
+//                 <NavLink to = '/' exact> Home </NavLink> 
+//                 <NavLink to = '/classic' exact> Classic </NavLink> 
+//                 <NavLink to = '/hooks' exact> Hooks </NavLink> 
+//                 <NavLink to = '/other' exact> Other </NavLink>    
+//             </div>
+//         </Segment>
+//     : 
+//         <span> <i class = "fas fa-bars"></i> </span>
+// }                                
+
+
+//   the fa burger NEVER CHANGES, BUT Text inside span reflects state change
+// {(isActive === true) 
+//     ?                         
+
+//         <span> Active FALSE  <i class = "fas fa-grimace"></i> </span>
+
 //     : 
 //         <span> Active TRUE  <i class = "fas fa-bars"></i> </span>
 // } 
