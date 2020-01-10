@@ -47,7 +47,7 @@ const AvengerHookCarousel = (props) => {
                 <Card.Header style = {{fontWeight: 'bolder'}}> {props.carouselHookProp}</Card.Header>
                 <Card.Content>{avengers[currentAvenger].name}</Card.Content>
                 <Card.Content>{avengers[currentAvenger].nickname}</Card.Content>
-        {/*        <CurrentAvenger currentAvenger = {currentAvenger}/>   */}
+                <CurrentAvenger currentAvenger = {currentAvenger}/>   
                 <Image centered style = {{borderRadius: `50%`}} 
                                     src = {avengers[currentAvenger].thumbnail}  alt = {props.avengerProps[currentAvenger].name}  />
                 <Label>Card Content used</Label>
@@ -62,17 +62,17 @@ const AvengerHookCarousel = (props) => {
 
 };
 
-// const CurrentAvenger = memo(({currentAvenger}) => {
-//     // const avengers  = props.avengerProps;
-//     return (
-//         <div style = {{border: '1px solid blue' , margin: '2px auto', width: '30%'}}>
+const CurrentAvenger = ({currentAvenger}) => {
+    // const avengers  = props.avengerProps;
+    return (
+        <div style = {{border: '1px solid blue' , margin: '2px auto', width: '30%'}}>
 
-//                 <div style = {{textAlign: 'center'}}> HERE {currentAvenger} </div>     
+                <div style = {{textAlign: 'center'}}> {currentAvenger} </div>     
 
-//         </div>
-//     )
+        </div>
+    )
 
-// });
+};
 
 
 export default AvengerHookCarousel;

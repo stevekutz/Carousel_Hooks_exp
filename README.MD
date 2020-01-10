@@ -15,7 +15,7 @@
 1) ### Set up React app `yarn create react-app app`
 
 2) ### Add app Dependencies  (several added for future styling)
-   `yarn add reinspect antd semantic-ui-react react-rainbow-components react-router-dom styled-components react-spinners-kit react-loader-spinner axios reactn reactn-devtools`   
+   `yarn add reinspect antd semantic-ui-react react-rainbow-components react-router-dom styled-components react-spinners-kit react-loader-spinner axios reactn reactn-devtools react-swipeable`   
     - For fontawesome:
     `yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
     - For `react-loaded-spinner`, you must also add `styled-components`

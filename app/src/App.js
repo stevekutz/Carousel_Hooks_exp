@@ -9,6 +9,7 @@ import {useState} from 'reinspect';
 import LandingPage from './components/LandingPage';
 import AvengerCarousel from './components/AvengerCarousel';
 import AvengerHookCarousel from './components/AvengerHookCarousel';
+import SwipeCarousel from './components/SwipeCarousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -52,7 +53,7 @@ function App() {
                                 <NavLink to = '/' exact> Home </NavLink> 
                                 <NavLink to = '/classic' exact> Classic </NavLink> 
                                 <NavLink to = '/hooks' exact> Hooks </NavLink> 
-                                <NavLink to = '/other' exact> Other </NavLink>    
+                                <NavLink to = '/swipe' exact> Swipe </NavLink>    
                             </div>
                         </Segment>
                     : 
@@ -87,6 +88,16 @@ function App() {
                         carouselHookProp = {` the Hook Carousel Page`} 
                         />}
                 />
+
+                <Route
+                exact path = '/swipe' 
+                render = { (props) => 
+                    <SwipeCarousel 
+                    {...props} 
+                    avengerProps = {avengerInfo}
+                    swipeProp = {` the Swipe Carousel Page`} 
+                    />}
+            />
             
             </div>    
         </div>                      
